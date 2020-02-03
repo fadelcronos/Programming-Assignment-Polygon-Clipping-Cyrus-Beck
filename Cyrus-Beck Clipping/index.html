@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cyrus-Back Clipping</title>
+	<link rel="stylesheet" type="text/css" href="css/css.css">
+	<script type="text/javascript" src="js/javascript.js"></script>
+</head>
+<body>
+	<div id="background">
+		<div id="workSheet">	
+			<canvas width="1180" height="600" id="myCanvas"></canvas>
+			<div id="tools">
+				<img onclick="draw('pointer')" class="image" src="img/cursor.png" style="width: 40px;left: 40px;margin-top: 5px;border-bottom: solid 2px black" title="POINTER">
+				<img onclick="draw('dot')" class="image" src="img/dot.png" style="width: 40px;left: 40px;margin-top: 7px;border-bottom: solid 2px black" title="DOT">
+				<img onclick="draw('line')" class="image" src="img/line.png" style="width: 40px;left: 40px;margin-top: 7px;border-bottom: solid 2px black" title="LINE">
+				<img onclick="draw('polygon')" class="image" src="img/polygon.png" style="width: 40px;left: 40px;margin-top: 7px;border-bottom: solid 2px black" title="POLYGON CLIPPING">
+				<img onclick="show()" class="image" src="img/trash.png" style="width: 40px;left: 40px;margin-top: 7px;border-bottom: solid 2px black" title="DELETE">
+				<img onclick="clearScreen()" class="image" src="img/clear.png" style="width: 40px;left: 40px;margin-top: 7px;border-bottom: solid 2px black" title="CLEAR">
+				<img onclick="removePolygon()" class="image" src="img/redraw.png" style="width: 40px;left: 40px;margin-top: 7px;border-bottom: solid 2px black" title="REFRESH SCREEN">
+				<img onclick="saveImg()" id="save" class="image" src="img/save.png" style="width: 40px;left: 40px;margin-top: 7px;border-bottom: solid 2px black" title="SAVE">
+				<div style="position: relative;top: 120px">
+					<p style="font-size:11px;text-decoration: underline;font-weight: bold">MOUSE</p> 
+					<p style="font-size:11px;text-decoration: underline;font-weight: bold">COORDINATE</p>
+					<p id="coordX" >X : 0</p>
+					<p id="coordY" >Y : 0</p>
+				</div>
+			</div>
+			<img onclick="closeSheet()" src="img/close.png" style="position: fixed;left: 935px;width: 30px;height: 30px;top: 206px;z-index: 3;display: none;" id="close" title="CLOSE">
+			<p id="nopoint" style="position: absolute;top: 305px;font-size: 35px;left:605px;z-index: 3;display: none ">NO POINT</p>
+			<p id="noline" style="position: absolute;top: 315px;font-size: 40px;left:605px;z-index: 3;display: none ">NO LINE</p>
+			<div id="deleteSheet">
+				<span onclick="showList('dot')" class="deletionTab" style="position: relative;left: 20px;top: 7px;float: left;font-size: 25px">DOT</span>
+				<span style="position: relative;left: 26px;top: 7px;float: left;font-size: 25px">|</span>
+				<span onclick="showList('line')" class="deletionTab" style="position: relative;left: 34px;top: 7px;float: left;font-size: 25px">LINE</span>
+				<hr style="position: relative;float:left;left: 10px;top: 12px;width: 545px">
+				<div id="dotList">
+					<table id="dotTable" border="1" style="border-collapse: collapse;margin-right: 10px;">
+						
+					</table>
+				</div>
+				<div id="lineList">
+					<table id="lineTable" border="1" style="border-collapse: collapse;margin-right: 10px;">
+						
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+*{
+	padding: 0;
+	margin: 0 auto;
+	text-align: center;
+}
+#background{
+	background: linear-gradient(156deg,#292826,#F9d342,#F9d342,#292826);
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	float: left;
+	left: 0;
+	z-index: -1;
+	overflow: auto;
+}
+#workSheet{
+
+	margin-top: 40px;
+	margin-left : 50px;
+
+}
+#myCanvas{
+	position: relative;
+	background-color: white;
+	float: left;
+	left: 0;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+#tools{
+	position: relative;
+	left: -57px;
+	background-color: grey;
+	float: right;
+	right: 0;
+	width: 80px;
+	height: 600px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	text-align: center;
+}
+.image:hover{
+	border:solid 2px #0C0A6D;
+	background-color: #9FDDFF
+}
+#deleteSheet{
+	position: absolute;
+	border-radius: 5px;
+	top:200px;
+	left: 400px;
+	width: 570px;
+	height: 200px;
+	background: linear-gradient(90deg,#566573,#CB4335);
+	display: none;
+	overflow: auto;
+	padding-bottom: 40px;
+	/*animation-name: deletion;
+	animation-duration: 4s;*/
+}
+@keyframes deletion{
+	from{
+		top: 0px;
+		opacity: 0;
+	}
+	to{
+		top: 100px;
+		opacity: 1;
+	}
+}
+.deletionTab:hover{
+	border: solid 2px black;
+	padding: 3px;
+	cursor: pointer;
+}
+#dotList{
+	position: relative;
+	float: left;
+	left: 10px;
+	top: 30px;
+	display: none;
+}
+#lineList{
+	position: relative;
+	float: left;
+	left: 10px;
+	top: 30px;
+	display: none;
+}
+th{
+	padding: 3px;
+}
